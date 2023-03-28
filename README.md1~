@@ -1,0 +1,7 @@
+# typeScriptToDoList
+# TypeScript tutorial from Udemy
+-usages:
+npm : 8.5.0
+node : 16.14.2
+Created with cra-template-typescript
+
