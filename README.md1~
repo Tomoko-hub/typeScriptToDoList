@@ -4,4 +4,6 @@
 npm : 8.5.0
 node : 16.14.2
 Created with cra-template-typescript
-
+firebase : npm i firebase@8.10.0
+React router : npm i react-router-dom@5.3.0 @types/react-router-dom@5.3.1
+material UI, icons : npm i @material-ui/core --legacy-peer-deps, npm i @material-ui/icons --legacy-peer-deps
