@@ -1,0 +1,45 @@
+firebase 
+npm i firebase@8.10.0
+
+npm i react-router-dom@5.3.0 @types/react-router-dom@5.3.1
+
+npm i @material-ui/core --legacy-peer-deps
+npm i @material-ui/icons --legacy-peer-deps
+
+npx create-react-app . --template typescript
+
+# typeScriptToDoList
+# TypeScript tutorial from Udemy
+-usages:
+npm : 8.5.0
+node : 16.14.2
+Created with cra-template-typescript
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDfzGNkZCYcGy0JgPBgHzAysGjBRVR-7Xs",
+  authDomain: "udemy-todolist-ts.firebaseapp.com",
+  projectId: "udemy-todolist-ts",
+  storageBucket: "udemy-todolist-ts.appspot.com",
+  messagingSenderId: "304259937803",
+  appId: "1:304259937803:web:445e2325b9af4fed18390e"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDfzGNkZCYcGy0JgPBgHzAysGjBRVR-7Xs",
+  authDomain: "udemy-todolist-ts.firebaseapp.com",
+  projectId: "udemy-todolist-ts",
+  storageBucket: "udemy-todolist-ts.appspot.com",
+  messagingSenderId: "304259937803",
+  appId: "1:304259937803:web:445e2325b9af4fed18390e"
+};
+
+cloud firestore
