@@ -1,8 +1,9 @@
-import { FormControl, TextField } from '@material-ui/core';
+import { FormControl, List, TextField } from '@material-ui/core';
 import React,{ useState, useEffect } from 'react';
 import './App.css';
 import { db } from "./firebase";
 import { AddToPhotos } from '@material-ui/icons';
+import TaskItem from './TaskItem';
 
 const App:React.FC=()=> {
 
@@ -18,7 +19,7 @@ const App:React.FC=()=> {
     return ()=>unSub();
   },[]);
 
-  const newTask = (event:React.MouseEventHandler<HTMLButtonElement>)=>{
+  const newTask = (event:React.MouseEvent<HTMLButtonElement>)=>{
     db.collection("task").add({title:input});
     setInput("");
   }
@@ -28,10 +29,16 @@ const App:React.FC=()=> {
     <h1>ToDo List by React/Firebase</h1>
     <FormControl>
       <TextField
+       InputLabelProps ={{
+          shrink: true,
+       }}
         label="New Task ?"
         value={input}
-        onChange={(event:React.ChangeEvent<HTMLInputElement>)=>setInput(event.target.value)}
-      ></TextField>
+        //React.DOMAttributes<HTMLButtonElement>.onClick?: React.MouseEventHandler<HTMLButtonElement>
+        onChange={(event:React.ChangeEvent<HTMLInputElement>)=>
+          setInput(event.target.value)
+        }
+       />
     </FormControl>
     <button 
       disabled={!input}
@@ -39,9 +46,11 @@ const App:React.FC=()=> {
     >
       <AddToPhotos />
     </button>
-    {tasks.map((task)=>(
-    <h3 key={task.id}>{task.title}</h3>
-    ))}
+    <List>
+      {tasks.map((task)=>(
+      <TaskItem key={task.id} id={task.id} title={task.title} />
+      ))}
+    </List>
   </div>
   )
 };
