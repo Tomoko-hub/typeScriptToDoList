@@ -1,9 +1,10 @@
 import { FormControl, List, TextField } from '@material-ui/core';
 import React,{ useState, useEffect } from 'react';
-import './App.css';
 import { db } from "./firebase";
 import { AddToPhotos } from '@material-ui/icons';
 import TaskItem from './TaskItem';
+import styles from './App.module.css'
+
 
 const App:React.FC=()=> {
 
@@ -25,8 +26,9 @@ const App:React.FC=()=> {
   }
 
   return (
-  <div className="App">
+  <div className={styles.app__root}>
     <h1>ToDo List by React/Firebase</h1>
+    <br />
     <FormControl>
       <TextField
        InputLabelProps ={{
@@ -40,7 +42,7 @@ const App:React.FC=()=> {
         }
        />
     </FormControl>
-    <button 
+    <button className={styles.app__icon}
       disabled={!input}
       onClick={newTask}
     >

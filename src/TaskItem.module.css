@@ -1,0 +1,8 @@
+.taskitem__icon {
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-left: 2px;
+    color: dimgray;
+}
